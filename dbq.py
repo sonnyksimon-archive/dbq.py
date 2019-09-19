@@ -2,7 +2,6 @@
 from __future__ import print_function
 from utils import storage, publishjson
 import sqlalchemy as sa
-import pandas as pd
 import sys
 import json
 
