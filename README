@@ -1,1 +1,7 @@
 Outputs the Result Set of a SQL Query as a JSON listing.
+
+Run `make install` to install dbq.
+
+Run `make uninstall` to remove dbq from your ~/.bin folder.
+
+Usage: dbq [CONNECTION STRING] [SQL QUERY]

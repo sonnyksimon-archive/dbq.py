@@ -6,7 +6,7 @@ import sys
 import json
 
 def showHelp(progname):
-    print("Usage: %s [CONNECTION STRING] [SQL_QUERY]" % (" ".join(progname)))
+    print("Usage: %s [CONNECTION STRING] [SQL QUERY]" % (" ".join(progname)))
 
 def run(connection_string, sql_query):
     db = sa.create_engine(connection_string)
