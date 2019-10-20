@@ -5,28 +5,33 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
 def main():
-    if flask.request.method == 'POST':
+    if flask.request.method == 'GET':
+        return """<code>
+dbq.py<br/>
+======<br/>
+<br/>
+Parameters:<br/>
+<br/>
+    "connection_string" <br/>
+<br/>
+    Must be a valid connection string. dbq.py uses SQLAlchemy, so test it on your<br/>
+    own machine first and ensure that the webserver can reach the database host.<br/>
+<br/>
+    "sql_query"<br/>
+<br/>
+    The query to run on the database.<br/>
+</code>
+"""
+    elif flask.request.method == 'POST':
         try:
             data = flask.request.get_json()
             connection_string = data['connection_string']
             sql_query = data['sql_query']
             results = dbq.run(connection_string, sql_query)
-            return flask.jsonify(results), 200
-        except:
+            return results, 200
+        except Exception as e:
+            print(str(e))
             return flask.jsonify(message='Something\'s wrong with your input.'), 404
-    return """<code>
-dbq.py
-======
 
-Parameters:
-
-    "connection_string" 
-
-    Must be a valid connection string. dbq.py uses SQLAlchemy, so test it on your
-    own machine first and ensure that the webserver can reach the database host.
-
-    "sql_query"
-
-    The query to run on the database.
-</code>
-"""
+if __name__ == '__main__':
+    app.run()

@@ -1,5 +1,6 @@
 SQLAlchemy
-#psycopg2
+psycopg2
+mysql-connector-python
 future
 gunicorn
 Flask
