@@ -7,8 +7,12 @@ app = flask.Flask(__name__)
 def main():
     if flask.request.method == 'GET':
         return """<code>
-dbq.py<br/>
-======<br/>
+dbq<br/>
+===<br/>
+<br/>
++-----+<br/>
+| api |<br/>
++-----+<br/>
 <br/>
 Parameters:<br/>
 <br/>
@@ -21,7 +25,11 @@ Parameters:<br/>
 <br/>
     The query to run on the database.<br/>
 <br/>
-<hr/>
+<br/>
++-----+<br/>
+| cli |<br/>
++-----+<br/>
+<br/>
 Usage: dbq.py [OPTIONS]<br/>
 <br/>
   This little Python script runs SQL statements on databases from the<br/>
