@@ -1,0 +1,35 @@
+
+dbq.py
+======
+
+api
+---
+
+Parameters:
+
+    "connection_string" 
+
+    Must be a valid connection string. dbq.py uses SQLAlchemy, so test it on your
+    own machine first and ensure that the webserver can reach the database host.
+
+    "sql_query"
+
+    The query to run on the database.
+
+cli
+---
+
+Usage: dbq.py [OPTIONS]
+
+  This little Python script runs SQL statements on databases from the
+  command-line.
+
+  You must pass in a valid connection string.
+
+  The raw query overrides the file query.
+
+Options:
+  --conn TEXT      Connection string.
+  --file FILENAME  SQL query file.
+  --sql TEXT       Raw query.
+  --help           Show this message and exit.
