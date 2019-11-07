@@ -7,8 +7,8 @@ app = flask.Flask(__name__)
 def main():
     if flask.request.method == 'GET':
         return """<code>
-dbq<br/>
-===<br/>
+dbq.py<br/>
+======<br/>
 <br/>
 +-----+<br/>
 | api |<br/>
