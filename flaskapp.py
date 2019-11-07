@@ -20,6 +20,22 @@ Parameters:<br/>
     "sql_query"<br/>
 <br/>
     The query to run on the database.<br/>
+<br/>
+<hr/>
+Usage: dbq.py [OPTIONS]<br/>
+<br/>
+  This little Python script runs SQL statements on databases from the<br/>
+  command-line.<br/>
+<br/>
+  You must pass in a valid connection string.<br/>
+<br/>
+  The raw query overrides the file query.<br/>
+<br/>
+Options:<br/>
+  --conn TEXT      Connection string.<br/>
+  --file FILENAME  SQL query file.<br/>
+  --sql TEXT       Raw query.<br/>
+  --help           Show this message and exit.<br/>
 </code>
 """
     elif flask.request.method == 'POST':
